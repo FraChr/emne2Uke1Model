@@ -12,7 +12,6 @@ const model = {
             "friendProfile",
         ],
     },
-
     inputs: {
         addDrink: {
             search: '',
@@ -20,12 +19,12 @@ const model = {
         },
         registerCustomDrink: {
             name: '',
-            amount: 0,
+            volume: 0,
             caffeine: 0,
         },
         setNewGoal: {
             goal: '',
-            amount: 0,
+            volume: 0,
         },
         friendDashboard: {
             like: false,
@@ -41,19 +40,19 @@ const model = {
             {
                 id: 1,
                 name: 'Red bull',
-                amount: 250,
+                volume: 250,
                 caffeine: 40,
             },
             {
                 id: 2,
                 name: 'Monster',
-                amount: 500,
+                volume: 500,
                 caffeine: 35,
             },
             {
                 id: 3,
                 name: 'Kaffe',
-                amount: 150,
+                volume: 150,
                 caffeine: 58,
             },
         ],
@@ -64,25 +63,6 @@ const model = {
                 email: 'martin@gmail.com',
                 password: '********',
                 profilePhoto: 'linkToImg',
-                goal: {
-                    title: 'Bedre søvn',
-                    amount: 150,
-                },
-                achievements: [
-                    { id: 1, globalAchivement: 1 }
-                ],
-                totalDrinks: [
-                    { id: 1, drinkId: 1, date: '19.03.2025', time: '00.00' },
-                    { id: 2, drinkId: 3, date: '19.03.2025', time: '08.35' }
-                ],
-                friends: [
-                    { id: 1, userId: 2 },
-                ],
-                favoriteDrinks: [
-                    { id: 2, drinkId: 2 }
-                ],
-                recievedComments: [],
-                givenComments: [],
             },
             {
                 id: 2,
@@ -90,30 +70,45 @@ const model = {
                 email: 'annekari@gmail.com',
                 password: '********',
                 profilePhoto: 'linkToImg',
-                goal: {
-                    title: 'Spare penger',
-                    amount: 250,
-                },
-                achivements: [
-                    { id: 1, globalAchivement: 3 }
-                ],
-                totalDrinks: [
-                    { id: 1, drinkId: 3, date: '15.04.2027', time: '02.00' },
-                    { id: 2, drinkId: 2, date: '19.01.2024', time: '09.35' }
-                ],
-                friends: [
-                    { id: 1, userId: 1 },
-                ],
-                favoriteDrinks: [],
-                recievedComments: [],
-                givenComments: [],
             },
+            {
+                id: 3,
+                userName: 'username1222',
+                email: 'petterkaare@gmail.com',
+                password: '********',
+                profilePhoto: 'linkToImg',
+            }
         ],
+
+
+
+        dailyGoals: [
+            { id: 1, userId: 3, title: 'spare penger', volume: 250 },
+            { id: 2, userId: 2, title: 'sove bedre', volume: 200 },
+            { id: 3, userId: 3, title: 'mindre angst', volume: 300 },
+        ],
+        userAchivements: [
+            { id: 1, userId: 3, globalAchivements: 2 },
+            { id: 2, userId: 1, globalAchivements: 1 },
+        ],
+        totalDrinks: [
+            { id: 1, userId: 3, drinkId: 2, date: '19.01.2024', time: '09.35' },
+            { id: 1, userId: 3, drinkId: 1, date: '19.01.2024', time: '11.00' },
+        ],
+        friends: [
+            { id: 1, userId: 1, friendId: 2 },
+            { id: 2, userId: 1, friendId: 3 },
+        ],
+
         globalAchivements: [
-            { id: 1, achivment: 'yay' },
-            { id: 2, achivment: 'tumbs up' },
-            { id: 3, achivment: 'score' },
-            { id: 4, achivment: 'bobla' }
-        ]
+            { id: 1, achievement: 'yay' },
+            { id: 2, achievement: 'tumbs up' },
+            { id: 3, achievement: 'score' },
+            { id: 4, achievement: 'bobla' },
+        ],
+        favoriteDrinks: [],
+        recievedComments: [],
+        givenComments: [],
+
     },
 }
